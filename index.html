@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="hr-en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+      integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Hrvoje Grgurinović - Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="titleicon.png">
+  </head>
+  <body>
+    <header class="header_nav header_nav_fixed">
+      <div class="nav_container">
+        <span class="img_log"></span>
+        <a class="woodmark_logo brand_logo" href="index.html"
+          >HRVOJE GRGURINOVIĆ <img class="woodmark_icon" src="titleicon60x60.png" alt="title icon" width="25px" height="25px">     PORTFOLIO</a
+        >
+        <ul class="nav_list" id="myTopnav">
+          <a href="#home" class="active nav_item">Home</a>
+          <a href="#about" class="nav_item">About</a>
+          <a href="#services" class="nav_item">Services</a>
+          <a href="#contact" class="contact_header">Contact</a>
+        </ul>
+
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+    </header>
+    <section class="hero-section">
+      <div class="hero-content">
+        <h1>Hrvoje Grgurinović – Portfolio</h1>
+        <p>Portfolio Front-end developera Hrvoja Grgurinovića</p>
+        <a href="#services" class="hero-button">View Services</a>
+      </div>
+    </section>
+    <section class="about-us">
+      <div class="about-us-container">
+        <div class="about-text">
+          <h3 class="tagline">Crafting Digital Experiences</h3>
+          <h2>Innovative front-end development</h2>
+          <p>
+            Hrvoje Grgurinović is an aspiring certified Front-end developer who
+            has completed an adult education course at Algebra University. Based
+            in New York, this portfolio site showcases Hrvoje's projects,
+            skills, and contact information, focusing on creating elegant and
+            responsive web structures. Explore his work as a springboard for
+            future projects and collaboration in the industry.
+          </p>
+          <a href="#contact" class="about-link">Get in touch</a>
+        </div>
+        <div class="about-image">
+          <img src="about-us.jpeg" alt="Cityscape with construction" />
+        </div>
+      </div>
+    </section>
+    <section class="services-section">
+      <div class="services-content">
+        <div class="services-header">
+          <h3 class="tagline">Creative Solutions</h3>
+          <h2 class="section-title">Innovative front-end development</h2>
+        </div>
+        <div class="services-cards">
+          <div class="service-card">
+            <img src="responsive-web-design.jpeg" alt="Responsive Web Design" />
+            <h3>Responsive web design <span>&#x2794;</span></h3>
+            <p>
+              Create stunning, user-friendly websites that adapt to any device.
+            </p>
+          </div>
+          <div class="service-card">
+            <img src="front-end-development.jpeg" alt="Front-End Development" />
+            <h3>Front-End development <span>&#x2794;</span></h3>
+            <p>Transform designs into dynamic, interactive user experiences.</p>
+          </div>
+          <div class="service-card">
+            <img
+              src="project-collaboration.jpeg"
+              alt="Project Collaboration"
+              class="last-image"
+            />
+            <h3>Project collaboration <span>&#x2794;</span></h3>
+            <p>Work closely with clients to achieve their vision and goals.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="contact-section">
+      <div class="form-container">
+        <h3 class="tagline">GET IN TOUCH</h3>
+        <h2 class="section-title">Let's collaborate on your next project!</h2>
+        <form class="contact-form">
+          <label for="name">Name<span class="required">*</span></label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Jane Smith"
+            required
+          />
+
+          <label for="email"
+            >Email Address<span class="required">*</span></label
+          >
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="email@website.com"
+            required
+          />
+
+          <label for="phone">Phone Number<span class="required">*</span></label>
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            placeholder="555-555-555"
+            required
+          />
+
+          <label for="message">Message</label>
+          <textarea
+            id="message"
+            name="message"
+            placeholder="Write your message here..."
+          ></textarea>
+          <div class="checkbox-container">
+            <input type="checkbox" id="rules" />
+            <label for="rules"
+              >I allow this website to store my submission so they can respond
+              to my inquiry<span class="required">*</span></label
+            >
+          </div>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+      <div class="info-container">
+        <p>
+          <strong>Get In Touch</strong>
+          <i class="fa-solid fa-envelope"></i
+          ><a href="mailto:hrvoje1404@gmail.com">hrvoje1404@gmail.com</a>
+        </p>
+        <p>
+          <strong>Location</strong>
+          <i class="fa-solid fa-location-dot"></i
+          ><a href="https://hr.wikipedia.org/wiki/Plo%C4%8De">Ploče, Republic of Croatia</a>
+        </p>
+        <p>
+          <strong>Resume - Curriculum Vitae (CV)</strong>
+          <i class="fa-sharp-duotone fa-solid fa-file"></i><a href="resume">CV</a>
+        </p>
+        <p>
+          <strong>Hours</strong>
+          <ul>
+            <li>
+              Monday	9:00am	–	10:00pm
+            </li>
+            <li>
+              Tuesday	9:00am	–	10:00pm
+            </li>
+            <li>
+              Wednesday	9:00am	–	10:00pm
+            </li>
+            <li>
+              Thursday	9:00am	–	10:00pm
+            </li>
+            <li>
+              Friday	9:00am	–	10:00pm
+            </li> 
+            <li>
+              Saturday	9:00am	–	6:00pm
+            </li> 
+            <li>
+              Sunday	9:00am	–	12:00pm
+            </li> 
+          </ul>
+        </p>
+      </div>
+    </section>
+    <script>
+      function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "nav_list") {
+          x.className += " responsive";
+        } else {
+          x.className = "nav_list";
+        }
+      }
+    </script>
+  </body>
+</html>
