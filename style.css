@@ -7,6 +7,12 @@
   
   html {
     scroll-behavior: smooth;
+    scrollbar-color: var(--main-color) transparent;
+    
+  }
+
+  :root{
+    --main-color:#11b899;
   }
   body {
     margin: 0;
@@ -16,13 +22,13 @@
   }
 
   header {
-    position: sticky;
+    
     top: 0;
     right: 0;
     z-index: 1000;
     justify-content: space-between;
     background-color: #fff;
-    background: rgba(255, 255, 255, 0.5);
+    background: #ffffff80;
     backdrop-filter: blur(1px);
     transition: all 0.5s ease;
   }
@@ -37,7 +43,7 @@
   {
       left: 0;
       margin: 0;
-      position: sticky !important;
+      position: relative !important;
       top: 0;
       right: 0;
   }
@@ -320,9 +326,9 @@
   }
 
   .about-image {
-    flex: 1;
+    flex: 0.5;
     min-width: 60vh;
-    height: 40vh;
+    height: 50vh;
     text-align: center;
   }
 
@@ -331,9 +337,13 @@
     border-radius: 10px;
     height: 500px;
   }
+
   .services-section {
     background-color: #EEF1EF;
+    margin-bottom: 0.5rem;
+    
   }
+
   .services-content{
     display:flex;
     flex-wrap: wrap;
@@ -375,10 +385,16 @@
     text-align: left;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
+  .service-card a,a::after {
+    text-decoration: none;
+    color: #000;
+  }
+  
 
   .service-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-10px) scale(1.1);
+    box-shadow: 10px 15px 20px var(--main-color);
+    text-decoration-color: var(--main-color);
     cursor: pointer;
   }
 
@@ -406,7 +422,7 @@
 
   .contact-section{
     display: flex;
-    padding:50px;
+    padding: 70px;
     max-width:1400px;
     margin:0 auto;
   }
@@ -453,6 +469,7 @@
   form button:hover{
     background-color:#0b6453;
   }
+
   .checkbox-container{
     display:flex;
     flex-direction:row;
@@ -469,10 +486,10 @@
   .info-container {
     background-color: #f9f9f9;
     padding: 20px;
-    border-radius: 8px;
+    border-radius: 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    min-width: 500px;
-    height:400px;
+    min-width: 300px;
+    height:250px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -481,10 +498,10 @@
   }
 
   .info-container p {
-    margin: 0 0 20px;
+    margin: 0 0 1rem;
     font-size: 16px;
     color: #333;
-    line-height: 1.5;
+    line-height: 1.7;
   }
 
   .info-container strong {
@@ -499,6 +516,11 @@
     color: #333;
     font-weight: 500;
     margin-left: 8px;
+  }
+
+  .info-container a:hover {
+    text-decoration: none;
+    color: var(--main-color);
   }
 
 
@@ -517,7 +539,51 @@
   .info-container ul li {
     font-size: 14px;
     color: #666;
-    margin-bottom: 6px;
+    margin-bottom: 0.3rem;
+    
+    
+  }
+
+  footer {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    margin: 0 auto;
+    height: 100px;
+    background-color: #666;
+  }
+
+  .tag-list {
+    margin: 0;
+    padding-inline: 0;
+    list-style: none;
+  }
+
+  .tag-list li {
+    padding: 1rem;
+    background: var(--main-color);
+    border-radius: 0.5rem;
+    box-shadow: 0 0.5rem 1rem -0.25rem var(--main-color);
+  }
+
+  .scroller {
+    max-width: 600px;
+    
+    /* outline: 3px solid var(--main-color); */
+
+  }
+
+
+  .scroller_inner {
+    padding-block: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .scroller [data-animated="true"] {
+    overflow: hidden;
+  }
+
+  [data-animated="true"] .scroller_inner {
+    flex-wrap: nowrap;
   }
