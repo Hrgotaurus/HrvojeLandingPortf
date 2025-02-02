@@ -10,16 +10,48 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
     <link rel="stylesheet" href="style.css" href="styleresponsive.css"/>
     <link rel="icon" href="titleicon.png">
+    <script
+    type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+      (function() {
+          emailjs.init({
+            publicKey: "3ykGmjBOx3gEWfJx1",
+          });
+      })();
+    </script>
     <title>Hrvoje Grgurinović - Portfolio</title>
   </head>
 
 
   <body>
-    <header class="header_nav header_nav_fixed">
+    
+    <header class="header_nav">
+
+      
+  
       <div class="nav_container">
         <span class="img_log"></span>
         <a class="woodmark_logo brand_logo" href="index.html"
           >HRVOJE GRGURINOVIĆ <img class="woodmark_icon" src="titleicon60x60.png" alt="title icon" width="25px" height="25px">     PORTFOLIO</a>
+          <script>
+            let prevScrollpos = window.pageYOffset;
+            const headerNav = document.querySelector('.header_nav');
+    
+            window.onscroll = function() {
+            let currentScrollPos = window.pageYOffset;
+            if (prevScrollpos > currentScrollPos) {
+            headerNav.style.top = "0";
+            } 
+            
+            else {
+            headerNav.style.top = "-15vh"; // Adjust the value based on your header's height
+            }
+            prevScrollpos = currentScrollPos;
+            }; 
+      
+        </script>
         <ul class="nav_list" id="myTopnav">
           <a href="#home" class="active nav_item">Home</a>
           <a href="#about" class="nav_item">About</a>
@@ -34,8 +66,8 @@
     </header>
     <section id="home" class="hero-section">
       <div class="hero-content">
-        <h1>Hrvoje Grgurinović – Portfolio</h1>
-        <p>Portfolio Front-end developera Hrvoja Grgurinovića</p>
+        <h1 class="hero-title">Hrvoje Grgurinović <img class="woodmark_icon" src="titleicon60x60.png" alt="title icon" width="50px" height="50px">  Portfolio</h1>
+        <p class="hero-desc">Portfolio showcasing Hrvoje Grgurinović's web developing projects followed with a contact access via e-mail</p>
         <a href="#services" class="hero-button">View Services</a>
       </div>
     </section>
@@ -45,14 +77,9 @@
           <h3 class="tagline">Crafting Digital Experiences</h3>
           <h2>Innovative front-end development</h2>
           <p>
-            Hrvoje Grgurinović is an aspiring certified Front-end developer who
-            has completed an adult education course at Algebra University. Based
-            in New York, this portfolio site showcases Hrvoje's projects,
-            skills, and contact information, focusing on creating elegant and
-            responsive web structures. Explore his work as a springboard for
-            future projects and collaboration in the industry.
+            Hrvoje Grgurinović is an aspiring certified Front-end developer who has completed an adult education course at Algebra University. Based in Ploče, Republic of Croatia.This portfolio site showcases Hrvoje's projects, skills, and contact information, focusing on creating elegant and responsive web structures. Explore his work as a springboard for future projects and collaboration in the industry.
           </p>
-          <a href="#contact" class="about-link">Get in touch</a>
+          <a href="#contact" class="about-link">GET IN TOUCH</a>
         </div>
         <div class="about-image">
           <img src="about-us.jpeg" alt="Cityscape with construction" />
@@ -91,11 +118,13 @@
         </div>
       </div>
     </section>
+
+    
     <section id="contact" class="contact-section">
       <div class="form-container">
         <h3 class="tagline">GET IN TOUCH</h3>
         <h2 class="section-title">Let's collaborate on your next project!</h2>
-        <form class="contact-form">
+        <form id="contact-form">
           <label for="name">Name<span class="required">*</span></label>
           <input
             type="text"
@@ -106,7 +135,7 @@
 
           <label for="email"
             >Email Address<span class="required">*</span></label>
-          <input
+          <inputjjjjjj
             type="email"
             id="email"
             name="email"
@@ -192,17 +221,44 @@
         }
       }
     </script>
-
+    <script type="text/javascript">
+      window.onload = function () {
+          // Initialize Email.js with your user ID
+          emailjs.init('3ykGmjBOx3gEWfJx1'); // Replace 'your_user_id' with your Email.js User ID
+  
+          document.getElementById('contact-form').addEventListener('submit', function (event) {
+              event.preventDefault();
+  
+              // Use emailjs.sendForm to send the form
+              emailjs
+                  .sendForm('service_z2lut6f', 'template_l8ox16f', this)
+                  .then(
+                      function () {
+                          alert('SUCCESS! Your message has been sent.');
+                      },
+                      function (error) {
+                          alert('FAILED... Please try again. ' + JSON.stringify(error));
+                      }
+                  );
+          });
+      };
+    </script>
     <footer>
+      <div class="footer-container">
+        <!-- <div class="footer-logo">
+          <a href="index.html" class="brand-logo">HRVOJE GRGURINOVIĆ</a>
+        </div> -->
       <div class="scroller">
-        <marquee behavior="" direction="">
+        
         <ul class="tag-list scroller_inner">
-        <li><a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a></li>
-        <li><a href="https://www.instagram.com/"><i class="fa-brands fa-square-instagram"></i></a></li>
+        <li><a href="https://www.upwork.com/freelancers/~0196412ed5bab806a2?mp_source=share"><i class="fa-brands fa-upwork"></i></a></li>
+        <li><a href="https://web.facebook.com/hrvoje.grgurinovic/"><i class="fa-brands fa-facebook-f"></i></a></li>
+        <li class="instagram"><a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a></li>
         <!-- <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a> -->
-        <li><a href="https://hr.linkedin.com/"><i class="fa-brands fa-linkedin"></i></a></li>
-      </ul></marquee>
+        <li><a href="www.linkedin.com/in/hrvoje-grgurinovic"><i class="fa-brands fa-linkedin-in"></i></a></li>
+      </ul>
       </div>
+      <p>&copy; Sva prava pridržana</p>
       <script>
         const scrollers = document.querySelectorAll(".scroller");
 
@@ -216,6 +272,7 @@
           });
         }
       </script>
+      </div>
     </footer>
   </body>
 </html>

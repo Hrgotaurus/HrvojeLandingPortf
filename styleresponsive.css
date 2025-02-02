@@ -4,9 +4,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+
 html {
     scroll-behavior: smooth;
-    scrollbar-color: #11b899 #fff;
+    scrollbar-color: #11b899 transparent;
 }
 
 body {
@@ -15,34 +23,158 @@ body {
     font-weight: 400;
     font-style: normal;
     
+    
   }
+
+.responsive-content {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+
+.responsive-content .tagline 
+{
+    font-size: 30px;
+}
+
+.responsive-conent p {
+    max-width: 600px;
+}
 
 
 .responsive-showcase {
     
     
-
+    display: flex;
     flex-direction: row;
-    position: relative;
-    z-index: auto;
-    padding: 10px;
     justify-content: center;
     align-items: center;
-    display: flex;
-
-
+    position: relative;
+    z-index: auto;
+    padding: 2.3rem;
 
 }
+
+
 
 
 .responsive-showcase img {
 
     flex: 0.5;
-    min-width: 20rem;
-    margin: 8rem 5rem 1rem 10rem;
-    padding: 0.5rem;
+    max-width: 30rem;
+    margin: 5rem 3rem 5rem 10rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     min-height: 30rem;
     text-align: center;
-    border-radius: 10px;
+    border-radius: 60px;
     
 }
+
+.responsive-showcase img:hover {
+    transform: translateY(-15px) scale(1.0);
+    
+    box-shadow: 10px 15px 20px var(--main-color);
+    text-decoration-color: var(--main-color);
+}
+
+footer {
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    z-index: 1;
+    padding-inline-start: 15rem;
+    
+    height: 200px;
+    background-color: #fff;
+  }
+
+  .footer-container {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 1400px;
+    
+  }
+
+  .footer-logo .brand-logo {
+    float: left;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--main-color);
+    text-decoration: none;
+    padding-right: 40rem;
+    margin: 0 0 0 -150px;
+  }
+
+  .brand-logo:hover {
+    transform: translateY(-15px) scale(1.0);
+    border-radius: 2px solid;
+    box-shadow: 10px 15px 20px var(--main-color);
+    text-decoration-color: var(--main-color);
+    
+  }
+  
+  .tag-list {
+    float: inline-end;
+    display: flex;
+    justify-content: right;
+    align-items: right;
+    margin: 0 0 0 1rem;
+    
+    list-style: none;
+  }
+
+  .tag-list li {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items:center;
+    
+    padding: 0.5rem 7rem 0.5rem 1.5rem;
+    margin: 1rem 9rem 1rem 2rem;
+    white-space: nowrap;
+    
+    background: transparent;
+    border-radius: 2rem 2rem 2rem 2rem;
+    }
+
+
+  .tag-list li:hover {
+    transform: scale(1.1);
+    }
+
+
+  .tag-list li i {
+    background-color: transparent;
+    color: var(--main-color);
+    font-size: 50px;
+    white-space: nowrap;
+    
+    
+    }
+  
+
+  .scroller {
+    max-width: 1400px;
+    margin:0 auto;
+    padding: 0;
+  }
+
+
+  .scroller_inner {
+    padding-block: 1rem;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 3rem;
+  }
+
+  .scroller [data-animated="true"] {
+    overflow: hidden;
+  }
+
+  [data-animated="true"] .scroller_inner {
+    flex-wrap: nowrap;
+  }
+  

@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
     <link rel="icon" href="titleicon.png">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="styleresponsive.css">
@@ -10,9 +13,27 @@
 </head>
 <body>
 
-    <!--HEADER NAVIGATION BAR-->
+    HEADER NAVIGATION BAR
 
-    <header class="header_nav header_nav_fixed">
+    <header class="header_nav">
+
+      <script>
+        let prevScrollpos = window.pageYOffset;
+        const headerNav = document.querySelector('.header_nav');
+
+        window.onscroll = function() {
+        let currentScrollPos = window.pageYOffset;
+        if (prevScrollpos > currentScrollPos) {
+        headerNav.style.top = "0";
+        } 
+        
+        else {
+        headerNav.style.top = "-15vh"; // Adjust the value based on your header's height
+        }
+        prevScrollpos = currentScrollPos;
+        }; 
+  
+    </script>
         <div class="nav_container">    
         <a class="woodmark_logo brand_logo" href="index.html">HRVOJE GRGURINOVIĆ <img class="woodmark_icon" src="titleicon60x60.png" alt="t
       icon" width="25px" height="25px">     PORTFOLIO</a>
@@ -27,15 +48,51 @@
             <i class="fa fa-bars"></i>
           </a>
         </div>
-    
+    </header> 
 
     <!-- HRVOJE'S RESPONSIVE WEB DESIGN SHOWCASE & EXPLANATION-->
     <section class="responsive-showcase">
+      <div class="responsive-card">
       <img src="responsive-web-design.jpeg" alt="">
+      </div>
+      <div class="responsive-content">
         <h1 class="tagline">Responsive web design</h1>
         <p>In today's digital landscape, responsive web design is essential. Hrvoje Grgurinović specializes in crafting visually appealing and functional websites that work seamlessly across all devices. By focusing on user experience and accessibility, Hrvoje ensures that your site not only looks great but also performs optimally, making navigation effortless for users. With a strong understanding of HTML, CSS, and JavaScript, he brings your vision to life, creating an engaging online presence that captures your audience’s attention. Elevate your brand and connect with your customers through innovative web design that stands out in a crowded digital marketplace.
         </p>
+      </div>
     </section>
+
+    <footer>
+      <div class="footer-container">
+        <!-- <div class="footer-logo">
+          <a href="index.html" class="brand-logo">HRVOJE GRGURINOVIĆ</a>
+        </div> -->
+      <div class="scroller">
+        
+        <ul class="tag-list scroller_inner">
+        <li><a href="https://www.upwork.com/freelancers/~0196412ed5bab806a2?mp_source=share"><i class="fa-brands fa-upwork"></i></a></li>
+        <li><a href="https://web.facebook.com/hrvoje.grgurinovic/"><i class="fa-brands fa-facebook-f"></i></a></li>
+        <li class="instagram"><a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a></li>
+        <!-- <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a> -->
+        <li><a href="www.linkedin.com/in/hrvoje-grgurinovic"><i class="fa-brands fa-linkedin-in"></i></a></li>
+      </ul>
+      </div>
+      <p>&copy; Sva prava pridržana</p>
+      <script>
+        const scrollers = document.querySelectorAll(".scroller");
+
+        if (!window.matchMedia("(prefers-reduced-motion:reduce)").matches) {
+          addAnimation ();
+        }
+
+        function addAnimation() {
+          scrollers.forEach((scroller) => {
+            scroller.setAttribute("data-animated", true);
+          });
+        }
+      </script>
+      </div>
+    </footer>
     
 </body>
 
